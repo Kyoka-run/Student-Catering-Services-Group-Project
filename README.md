@@ -37,6 +37,14 @@ Navigate through the application using the navigation bar. Access different sect
 ### License
 Distributed under the MIT License. See LICENSE for more information.
 
+### Team Members and Roles
+Celine Boudaie: Front-end development HTML and CSS
+Yann Joubert: Client-side interactive features (JavaScript)
+Bin Zhang: Server-side development
+Mhd Saria Al Khen: Database design and connectivity
+Gouri Dinase: Testing and quality assurance
+Genwei Zhang: Code repository management, and installation
+
 ### Contact
 
 ### Acknowledgements
