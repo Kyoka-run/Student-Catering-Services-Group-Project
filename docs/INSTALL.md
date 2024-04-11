@@ -7,7 +7,7 @@ This document provides detailed instructions on setting up and running the Stude
 Before you begin the installation, make sure you have the following installed:
 - A modern web browser like Google Chrome, Mozilla Firefox, or Safari
 - A local server environment such as XAMPP, WAMP, MAMP, or equivalent
-- Java Development Kit (JDK), if server-side code is in Java
+- Java Development Kit (JDK)
 - MySQL Server for database management
 
 ### Step 1: Clone the Repository
