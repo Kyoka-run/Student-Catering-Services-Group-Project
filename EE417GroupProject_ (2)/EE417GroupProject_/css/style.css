@@ -1,0 +1,249 @@
+
+/* General styles omitted for brevity, focusing on adjustments */
+
+/* Styling for the shop items removed for alignment correction */
+
+/* Positioning the checkout icon at the top right corner */
+.checkout-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    cursor: pointer;
+}
+
+/* Updating footer message style */
+.footer p {
+    margin: 0; /* Adjusting spacing for simplicity */
+}
+
+/* Basic reset for margin and padding to ensure consistency across browsers */
+body, h1, h2, h3, p, div {
+    margin: 0;
+    padding: 0;
+}
+
+/* Setting a basic font and background color for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Styling for the header section */
+.header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Navigation bar styling */
+#navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+#navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+#navbar a:hover {
+    background-color: #555;
+    color: white;
+}
+
+/*taking advantage of clearfix to display things differently*/
+
+#navbar-left-div{
+    width: 95%;
+    min-height: fit-content;
+    float: left;
+    text-align: center;
+}
+#navbar-right-div{
+    width: 5%;
+    min-height: fit-content;
+    float: right;
+    text-align: right;
+}
+#login-container{
+    padding-top: 15px;
+}
+
+/* Main content styling */
+.main {
+    padding: 20px;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Style The Dropdown Button */
+/* Style the dropdown button to fit into the nav bar */
+.dropbtn {
+    background-color: #333;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    color:black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+#navbar .dropdown .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Change color of dropdown links on hover */
+#navbar .dropdown .dropdown-content a:hover {background-color: #d8d8d8}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #555;
+}
+
+/* Dropdown Button Inside Shop Item */
+label {
+    margin-top: 10px;
+    display: inline-block;
+    color: #666;
+}
+
+/* Forms */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+.content {
+    margin-left: 250px;
+    padding: 50px;
+    max-width: 600px;
+    margin: auto;
+}
+
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/*Using clearfix to create row/column styling*/
+/* Clearfix for floating elements */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.row{
+    width: 100%;
+    min-height: 100px;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom:10px;    
+}
+
+.col {
+    width: 25%;
+    min-height: 100px;
+    background-color: lightgray;
+    float: left;
+    text-align: left;
+    padding: 10px; /* Added padding for internal spacing */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    overflow: hidden; /* Ensures content does not overflow the div boundaries */
+}
+.col:nth-child(1){
+	margin-left:7.5%;
+	margin-right:5%;
+	
+}
+.col:nth-child(2){
+	
+	margin-right:5%;
+	
+}
+.col:nth-child(3){
+
+	margin-right:5%;
+	
+}
+.col img {
+    width: 100%; /* Set the width of the image to 100% of its container */
+    height: auto; /* Allow the height to adjust proportionally based on the width */
+    max-width: 100%; /* Ensure the image does not exceed the width of its container */
+    max-height: 100%; /* Ensure the image does not exceed the height of its container */
+}
+
+#home-container{
+    width:100%;
+    min-height: fit-content;
+    text-align: left;
+    
+}
+#home-container img {
+    max-width: 100%; /* The image will be at most 100% of its container's width */
+    max-height: 800px; /* And at most 500px tall */
+    height: auto; /* Maintain aspect ratio */
+}
