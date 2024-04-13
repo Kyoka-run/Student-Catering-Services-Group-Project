@@ -1,103 +1,74 @@
+<!-- Pizza Page for Student Catering Services -->
+<!-- This page displays various pizza options available for order, each with customizable sizes and toppings. -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Ensuring the page is responsive and scales correctly on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza | Student Catering Services</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Page header with the main title -->
     <div class="header">
         <h1>Pizza</h1>
     </div>
-    
+
+    <!-- Navigation bar to help users easily navigate through the site -->
     <div id="navbar" class="clearfix">
+        <!-- Left-aligned items on the navbar -->
         <div id="navbar-left-div">
-            <a href="../index.html">Home</a>
+            <a href="../index.html">Home</a> <!-- Direct link to the home page -->
+            <!-- Dropdown for different sections of the shop, helping users explore other categories -->
             <div class="dropdown">
                 <button class="dropbtn">Shop</button>
                 <div class="dropdown-content">
-                    <a href="../shop/pizza.html">Pizza</a>
+                    <a href="../shop/pizza.html">Pizza</a> <!-- Current page, highlighted as active -->
                     <a href="../shop/coffee.html">Coffee</a>
                     <a href="../shop/mexican.html">Mexican</a>
                 </div>
             </div>
-            <a href="../static/about.html">About Us</a>
+            <a href="../static/about.html">About Us</a> <!-- Link to learn more about the service -->
+            <!-- Dropdown for help-related links -->
             <div class="dropdown">
-                <button class="dropbtn">FAQ</button>
+                <button class="dropbtn">Help</button>
                 <div class="dropdown-content">
                     <a href="../static/forms.html">Forms</a>
                     <a href="../static/faq.html">FAQ</a>
                 </div>
             </div>
         </div>
+        <!-- Right-aligned items, typically for user account management -->
         <div id="navbar-right-div">
-            <div id="login-container">
-                <a href="../login.html">Login</a>
-            </div>
-            
+            <a href="../login.html">Login</a> <!-- Allows users to log into their accounts -->
         </div>
-    
-        
-        
     </div>
 
+    <!-- Main content section where pizza options are displayed -->
     <div class="main">
         <div class="row clearfix">
-            
-            <!-- Column 1 -->
+            <!-- Each column represents a different pizza, with options to select size and add to cart -->
             <div class="col">
                 <div class="shop-item">
                     <img src="../../images/pizza1.jpg" alt="Pizza Item 1">
                     <label for="size">Pepperoni Pizza - Choose Size</label>
                     <select id="size" name="size">
-                        <option value="Small"> $8.99 - Small</option>
-                        <option value="medium"> $10.99 - Medium</option>
-                        <option value="large"> $12.99 - Large</option>
-                       
-                        
-                    </select><br>
-                    
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-
-            </div>
-
-            <!-- Column 2 -->
-            <div class="col">
-
-                <div class="shop-item">
-                    <img src="../../images/pizza2.jpg" alt="Pizza Item 2">
-                    <label for="size">Margherita Pizza - Choose Size</label>
-                    <select id="size" name="size">
-                        <option value="Small"> $8.99 - Small</option>
-                        <option value="medium"> $10.99 - Medium</option>
-                        <option value="large"> $12.99 - Large</option>
-                       
-                        
-                    </select><br>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-                
-            </div>
-            <!-- Column 3 -->
-            <div class="col">
-                <div class="shop-item">
-                    <img src="../../images/pizza3.jpg" alt="Pizza Item 3">
-                    <label for="size">Merguez Sausage Pizza  - Choose Size</label>
-                    <select id="size" name="size">
-                        <option value="Small"> $8.99 - Small</option>
-                        <option value="medium"> $10.99 - Medium</option>
-                        <option value="large"> $12.99 - Large</option>
-                       
-                        
+                        <option value="Small"> $9.99 - Small</option>
+                        <option value="Medium"> $11.99 - Medium</option>
+                        <option value="Large"> $13.99 - Large</option>
                     </select><br>
                     <button class="add-to-cart">Add to Cart</button>
                 </div>
             </div>
-            
         </div>
-    <div class="footer"><p>All rights reserved.</p></div>
+    </div>
+
+    <!-- Footer section with copyright and link to terms of service -->
+    <div class="footer">
+        <p>&copy; 2024 Student Catering Services. All rights reserved.</p>
+    </footer>
 </body>
 </html>

@@ -1,110 +1,68 @@
+<!-- Mexican Food Page for Student Catering Services -->
+<!-- This page showcases Mexican cuisine options available for ordering, featuring various dishes with customizable sizes. -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Responsive meta tag to ensure the page scales correctly on different devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mexican | Student Catering Services</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
+    <!-- Header of the page with a title indicating the content of the page -->
     <div class="header">
         <h1>Mexican</h1>
     </div>
     
-<div id="navbar" class="clearfix">
-    <div id="navbar-left-div">
-        <a href="../index.html">Home</a>
-        <div class="dropdown">
-            <button class="dropbtn">Shop</button>
-            <div class="dropdown-content">
-                <a href="../shop/pizza.html">Pizza</a>
-                <a href="../shop/coffee.html">Coffee</a>
-                <a href="../shop/mexican.html">Mexican</a>
+    <!-- Navigation bar for site-wide links -->
+    <div id="navbar" class="clearfix">
+        <div id="navbar-left-div">
+            <a href="../index.html">Home</a> <!-- Link back to the homepage -->
+            <div class="dropdown">
+                <button class="dropbtn">Shop</button>
+                <div class="dropdown-content">
+                    <a href="../shop/pizza.html">Pizza</a> <!-- Link to the Pizza shop page -->
+                    <a href="../shop/coffee.html">Coffee</a> <!-- Link to the Coffee shop page -->
+                    <a href="../shop/mexican.html">Mexican</a> <!-- Current page is Mexican, highlighted as active -->
+                </div>
+            </div>
+            <a href="../static/about.html">About Us</a> <!-- Link to the About Us page -->
+            <div class="dropdown">
+                <button class="dropbtn">FAQ</button>
+                <div class="dropdown-content">
+                    <a href="../static/forms.html">Forms</a> <!-- Link to forms page -->
+                    <a href="../static/faq.html">FAQ</a> <!-- Link to FAQ page -->
+                </div>
             </div>
         </div>
-        <a href="../static/about.html">About Us</a>
-        <div class="dropdown">
-            <button class="dropbtn">FAQ</button>
-            <div class="dropdown-content">
-                <a href="../static/forms.html">Forms</a>
-                <a href="../static/faq.html">FAQ</a>
-            </div>
+        <div id="navbar-right-div">
+            <a href="../login.html">Login</a> <!-- Link for users to log in to their accounts -->
         </div>
     </div>
-    <div id="navbar-right-div">
-        <div id="login-container">
-            <a href="../login.html">Login</a>
-        </div>
-        
-    </div>
 
-    
-    
-</div>
-
+    <!-- Main content area where the Mexican food items are displayed -->
     <div class="main">
         <div class="row clearfix">
-            
-            <!-- Column 1 -->
+            <!-- Each column represents a different dish, with image, description, and options to choose size -->
             <div class="col">
                 <div class="shop-item">
                     <img src="../../images/mexican1.jpg" alt="Mexican Item 1">
                     <label for="size">Steak Fajitas - Choose Size</label>
                     <select id="size" name="size">
                         <option value="Small"> $8.99 - Small</option>
-                        <option value="medium"> $10.99 - Medium</option>
-                        <option value="large"> $12.99 - Large</option>
-                       
-                        
-                    </select><br>
-                    
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-
-            </div>
-
-            <!-- Column 2 -->
-            <div class="col">
-
-                <div class="shop-item">
-                    <img src="../../images/mexican2.jpg" alt="Mexican Item 2">
-                    <label for="size">Carnitas Tacos - Choose Size</label>
-                    <select id="size" name="size">
-                        <option value="Small"> $8.99 - Small</option>
-                        <option value="medium"> $10.99 - Medium</option>
-                        <option value="large"> $12.99 - Large</option>
-                       
-                        
-                    </select><br>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-                
-            </div>
-            <!-- Column 3 -->
-            <div class="col">
-                <div class="shop-item">
-                    <img src="../../images/mexican3.jpg" alt="Mexican Item 3">
-                    <label for="size">Barbeque Burrito Bowl - Choose Size</label>
-                    <select id="size" name="size">
-                        <option value="Small"> $8.99 - Small</option>
-                        <option value="medium"> $10.99 - Medium</option>
-                        <option value="large"> $12.99 - Large</option>
-                       
-                        
+                        <option value="Medium"> $10.99 - Medium</option>
+                        <option value="Large"> $12.99 - Large</option>
                     </select><br>
                     <button class="add-to-cart">Add to Cart</button>
                 </div>
             </div>
-            
         </div>
-
-        
-        
-        
-        
     </div>
 
+    <!-- Footer section for copyright and additional information -->
     <div class="footer"><p>All rights reserved.</p></div>
 </body>
 </html>

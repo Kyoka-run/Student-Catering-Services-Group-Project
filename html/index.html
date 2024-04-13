@@ -1,58 +1,50 @@
+<!-- Home Page for Student Catering Services -->
+<!-- This is the main landing page for users accessing the Student Catering Services web application. -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home | Student Catering Services</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <!-- Title of the home page -->
+    <title>Welcome | Student Catering Services</title>
+    <!-- Link to the stylesheet for common styles -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Header section with the application title and logo -->
     <div class="header">
-        <h1>Home</h1>
+        <h1>Welcome to Student Catering Services</h1>
+        <img src="images/logo.png" alt="Student Catering Services Logo">
     </div>
     
-    <div id="navbar" class="clearfix">
-        <div id="navbar-left-div">
-            <a href="index.html">Home</a>
-            <div class="dropdown">
-                <button class="dropbtn">Shop</button>
-                <div class="dropdown-content">
-                    <a href="shop/pizza.html">Pizza</a>
-                    <a href="shop/coffee.html">Coffee</a>
-                    <a href="shop/mexican.html">Mexican</a>
-                </div>
-            </div>
-            <a href="static/about.html">About Us</a>
-            <div class="dropdown">
-                <button class="dropbtn">FAQ</button>
-                <div class="dropdown-content">
-                    <a href="static/forms.html">Forms</a>
-                    <a href="static/faq.html">FAQ</a>
-                </div>
-            </div>
-        </div>
-        <div id="navbar-right-div">
-            <div id="login-container">
-                <a href="login.html">Login</a>
-            </div>
-            
-        </div>
+    <!-- Navigation bar for site navigation -->
+    <nav id="navbar">
+        <!-- Home link is active since we are on the home page -->
+        <a href="index.html" class="active">Home</a>
+        <!-- Links to other pages of the application -->
+        <a href="about.html">About Us</a>
+        <a href="menu.html">Menu</a>
+        <a href="contact.html">Contact</a>
+        <!-- Login link for user to access their account -->
+        <a href="login.html" class="login">Login</a>
+    </nav>
     
-        
-        
+    <!-- Main content area of the home page -->
+    <div class="main-content">
+        <!-- Welcome message or introductory content goes here -->
+        <p>Welcome to the Student Catering Services. Explore our menu and order your favorite dishes!</p>
     </div>
 
+    <!-- Footer section with copyright and additional links -->
+    <footer>
+        <p>&copy; 2024 Student Catering Services. All rights reserved.</p>
+        <!-- Social media or additional links -->
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+    </footer>
 
-    <div class="main">
-<div class="main">
-    <h2>Welcome to Our Student Catering Services</h2>
-    <p>Discover our wide range of delicious food options, from coffee to pizza and beyond.</p>
-    <br>
-    <div id="home-container"><img src="../Images/home.jpg" alt="Welcome Image"></div>
-    
-</div>
-</div>
-    <div class="footer"><p>All rights reserved.</p></div>
+    <!-- Scripts for interactivity -->
+    <script src="js/script.js"></script>
 </body>
 </html>
+

@@ -1,50 +1,63 @@
+<!-- FAQ Page for Student Catering Services -->
+<!-- This page is intended to answer the most common questions asked by the users of the service. -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Faq | Student Catering Services</title>
+    <title>Frequently Asked Questions | Student Catering Services</title>
+    <!-- Responsive design meta tag to ensure proper rendering on mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
+    <!-- Header section -->
     <div class="header">
-        <h1>Faq</h1>
+        <h1>Frequently Asked Questions (FAQs)</h1>
     </div>
     
+    <!-- Navigation bar to allow users to easily navigate to different sections of the website -->
     <div id="navbar" class="clearfix">
+        <!-- Left side of the navbar for general navigation -->
         <div id="navbar-left-div">
-            <a href="../index.html">Home</a>
+            <a href="../index.html">Home</a> <!-- Link back to the homepage -->
+            <!-- Dropdown menu for shopping categories, improving user experience by grouping related items -->
             <div class="dropdown">
                 <button class="dropbtn">Shop</button>
                 <div class="dropdown-content">
-                    <a href="../shop/pizza.html">Pizza</a>
-                    <a href="../shop/coffee.html">Coffee</a>
-                    <a href="../shop/mexican.html">Mexican</a>
+                    <a href="../shop/pizza.html">Pizza</a> <!-- Direct link to the Pizza category -->
+                    <a href="../shop/coffee.html">Coffee</a> <!-- Direct link to the Coffee category -->
+                    <a href="../shop/mexican.html">Mexican</a> <!-- Direct link to the Mexican category -->
                 </div>
             </div>
-            <a href="../static/about.html">About Us</a>
+            <a href="../static/about.html">About Us</a> <!-- Link to learn more about the service -->
+            <!-- Dropdown for help-related content -->
             <div class="dropdown">
-                <button class="dropbtn">FAQ</button>
+                <button class="dropbtn">Help</button>
                 <div class="dropdown-content">
-                    <a href="../static/forms.html">Forms</a>
-                    <a href="../static/faq.html">FAQ</a>
+                    <a href="../static/forms.html">Contact Forms</a> <!-- Link to contact forms for user inquiries -->
+                    <a href="../static/faq.html" class="active">FAQ</a> <!-- Active link indicating the current page -->
                 </div>
             </div>
         </div>
+        <!-- Right side of the navbar -->
         <div id="navbar-right-div">
-            <div id="login-container">
-                <a href="../login.html">Login</a>
-            </div>
-            
+            <a href="../login.html">Login</a> <!-- Link for users to access their accounts -->
         </div>
-    
-        
-        
     </div>
 
+    <!-- Main content area where the FAQs will be listed -->
+    <div class="main">
+        <p>Here you will find answers to common questions about our services, ordering process, payment methods, and more.</p>
+        <!-- The content inside will be dynamic and could be fetched from a database or content management system -->
+    </div>
 
-    <div class="main">Frequently Asked Questions (FAQs) will be answered here.</div>
-    <div class="footer"><p>All rights reserved.</p></div>
+    <!-- Footer with copyright and other legal information -->
+    <div class="footer">
+        <p>&copy; 2024 Student Catering Services. All rights reserved.</p>
+    </div>
 </body>
 </html>

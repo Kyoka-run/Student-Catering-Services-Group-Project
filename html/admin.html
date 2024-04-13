@@ -1,20 +1,24 @@
+<!-- Admin Login Page -->
+<!-- This HTML file defines the structure for the admin login page for the Student Catering Services application. -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Login</title>
-  <link rel="stylesheet" href="../css/login.css">
+  <link rel="stylesheet" href="../css/login.css"> <!-- Link to external CSS for styling -->
 </head>
 <body>
   <div class="login-container">
     <h2>Admin login</h2>
+    <!-- Login form for admin users -->
     <form id="admin-login">
-      <input type="text" id="username" placeholder="Nom d'utilisateur" required>
-      <input type="password" id="password" placeholder="Mot de passe" required>
-      <button type="submit">Connexion</button>
+      <input type="text" id="username" placeholder="Nom d'utilisateur" required> <!-- Username field -->
+      <input type="password" id="password" placeholder="Mot de passe" required> <!-- Password field -->
+      <button type="submit">Connexion</button> <!-- Submission button -->
     </form>
-    <p id="error-message" class="error-message"></p>
+    <p id="error-message" class="error-message"></p> <!-- Area to display login errors -->
   </div>
 
   <script src="../js/admin.js"></script>
