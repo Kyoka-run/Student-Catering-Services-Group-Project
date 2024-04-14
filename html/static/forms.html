@@ -1,32 +1,28 @@
 <!-- Forms Page for Student Catering Services -->
-<!-- This page presents a form for users to send messages to the administration. -->
+<!-- This page provides various forms for user input, enhancing interaction such as feedback, queries, or service requests directly through the website. -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Title for the FAQ page -->
-    <title>Faq | Student Catering Services</title>
-    <!-- Google font integration -->
+    <title>Forms | Student Catering Services</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-    <!-- Link to the main stylesheet which governs the look and feel of the page -->
     <link rel="stylesheet" href="../../css/style.css">
-    <!-- Forms JavaScript file contains the logic to handle form submissions -->
+    <!-- JavaScript file for handling form interactions and validations -->
     <script src="../../js/forms.js" defer></script>
 </head>
 <body>
-    <!-- Header of the page, containing the title -->
+    <!-- Header that introduces the form section of the site -->
     <div class="header">
-        <h1>Faq</h1>
+        <h1>Forms</h1>
     </div>
     
-    <!-- Navigation bar allows users to navigate to different pages -->
+    <!-- Navigation bar to facilitate easy access to various site sections -->
     <div id="navbar" class="clearfix">
-        <!-- Left-aligned items in the navigation bar -->
         <div id="navbar-left-div">
-            <!-- Link to the home page -->
+            <!-- Home link to allow users to easily navigate back to the main page -->
             <a href="../index.html">Home</a>
-            <!-- Dropdown for the Shop category with various food options -->
+            <!-- Dropdown menu for shopping options, categorized for user convenience -->
             <div class="dropdown">
                 <button class="dropbtn">Shop</button>
                 <div class="dropdown-content">
@@ -35,55 +31,56 @@
                     <a href="../shop/mexican.html">Mexican</a>
                 </div>
             </div>
-            <!-- Direct link to the About Us page -->
-            <a href="../static/about.html">About Us</a>
-            <!-- Dropdown for the Help category -->
+            <!-- Informational dropdown providing links to about and terms of service pages -->
+            <div class="dropdown">
+                <button class="dropbtn">About Us</button>
+                <div class="dropdown-content">
+                    <a href="../static/about.html">About Us</a>
+                    <a href="../static/tos.html">Terms of Service</a>
+                </div>
+            </div>
+            <!-- Dropdown for additional support pages like forms and FAQ -->
             <div class="dropdown">
                 <button class="dropbtn">FAQ</button>
                 <div class="dropdown-content">
-                    <!-- Links to forms and FAQ within the Help category -->
-                    <a href="../static/forms.html">Forms</a>
+                    <a href="../static/forms.html" class="active">Forms</a>
                     <a href="../static/faq.html">FAQ</a>
                 </div>
             </div>
         </div>
-        <!-- Right-aligned items in the navigation bar -->
+        <!-- Right-aligned login section for easy user account access -->
         <div id="navbar-right-div">
-            <!-- Container for the login link -->
-            <div id="login-container">
-                <!-- Link to the login page -->
-                <a href="../login.html">Login</a>
-            </div>
+            <a href="../login.html">Login</a>
         </div>
     </div>
 
-    <!-- Main content area -->
+    <!-- Main content section featuring the forms for user interaction -->
     <div class="content">
-        <h2>Forms</h2>
-        <!-- The form where users can submit their messages -->
+        <h2>Forms</h2> <!-- Heading for the forms section -->
         <form id="myForm">
-            <!-- Grouping for name field -->
+            <!-- Grouping for name input, including label for accessibility -->
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
             </div>
-            <!-- Grouping for email field -->
+            <!-- Grouping for email input, crucial for contact follow-ups -->
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
             </div>
-            <!-- Grouping for message text area -->
+            <!-- Grouping for message textarea, allowing for extended user input -->
             <div class="form-group">
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="4" required></textarea>
             </div>
-            <!-- Button to submit the form -->
+            <!-- Submission button to send form data -->
             <button type="submit">Send</button>
         </form>
     </div>
 
-    <!-- Footer with copyright notice -->
-    <div class="footer"><p>All rights reserved.</p></div>
+    <!-- Footer section with a simple copyright notice -->
+    <div class="footer">
+        <p>All rights reserved.</p>
+    </div>
 </body>
 </html>
-
