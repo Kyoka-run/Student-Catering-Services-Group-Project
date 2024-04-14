@@ -26,12 +26,12 @@ spring.datasource.password=your_password
 
 ### Step 3: Build the Project
 Run the following command in the root directory of the Spring Boot project to build the application:
-```sh mvn clean install
+mvn clean install
 This will compile the application and run any unit tests.
 
 ### Step 4: Run the Application
 To start the application, execute:
-```sh mvn spring-boot:run
+mvn spring-boot:run
 The server will start, and the back-end will be accessible at http://localhost:8080.
 
 ## Front-end Setup
