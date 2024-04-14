@@ -1,65 +1,68 @@
 # Installation Guide for Student Catering Services Application
 
-This document provides detailed instructions on setting up and running the Student Catering Services web application on a local development environment.
+This guide details the process for setting up the Student Catering Services application, including both the front-end and the Spring Boot back-end components.
 
 ## Prerequisites
 
-Before you begin the installation, make sure you have the following installed:
-- A modern web browser like Google Chrome, Mozilla Firefox, or Safari
-- A local server environment such as XAMPP, WAMP, MAMP, or equivalent
-- Java Development Kit (JDK)
-- MySQL Server for database management
+Before you begin, ensure you have the following installed:
+- JDK 11 or later
+- Maven
+- MySQL Server or any other relational database server
+
+## Back-end Setup
 
 ### Step 1: Clone the Repository
+Clone the repository to your local machine:
 
-Start by cloning the project repository to your local machine using the following command:
-
-
-## Installation Steps
-```bash
 git clone https://github.com/Kyoka-run/EE417-GroupAssignment.git
-cd EE417-GroupAssignment
-```
+cd EE417-GroupAssignment/springboot
 
-### Step 2: Set Up the Local Server
+### Step 2: Configure Application Properties
+Edit the application.properties file found in src/main/resources to reflect your local database settings:
 
-Copy the project into the document root of your local server:
+bash
+Copy code
+spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name
+spring.datasource.username=your_username
+spring.datasource.password=your_password
 
-- For XAMPP, it's usually `C:/xampp/htdocs/`.
-- For WAMP, it's usually `C:/wamp/www/`.
-- For MAMP, it's usually `/Applications/MAMP/htdocs/`.
+### Step 3: Build the Project
+Run the following command in the root directory of the Spring Boot project to build the application:
 
-### Step 3: Import the Database
+bash
+Copy code
+./mvnw clean install
+# Or if using Maven directly:
+# mvn clean install
+This will compile the application and run any unit tests.
 
-- Start your MySQL server using your local server environment control panel.
-- Open your preferred MySQL database management tool (e.g., phpMyAdmin).
-- Create a new database named `student_catering_db`.
-- Import the provided SQL script located in the database directory of the project to create and populate tables.
+### Step 4: Run the Application
+To start the application, execute:
 
-### Step 4: Configure the Application
+Copy code
+./mvnw spring-boot:run
+# Or if using Maven directly:
+# mvn spring-boot:run
+The server will start, and the back-end will be accessible at http://localhost:8080.
 
-Update the database connection settings in the server-side code to match your local MySQL setup. You may need to set up the following:
+## Front-end Setup
+The front-end static files are served by the Spring Boot application once it is running. You can access the home page by navigating to http://localhost:8080.
 
-- Database name: `student_catering_db`
-- Username: Typically `root` for local environments
-- Password: Usually empty (`''`) for local environments, unless you set one
+### Database Initialization
+Execute the SQL scripts provided in the database directory to set up your database schema and populate it with initial data.
 
-### Step 5: Start the Application
+### Testing the Application
+With the server running, open your web browser and navigate to http://localhost:8080. You should see the landing page of the Student Catering Services application.
 
-Launch the application by opening your web browser and visiting:
+### Additional Notes
+If you encounter any issues with the Maven Wrapper (i.e., ./mvnw commands), ensure you have the correct permissions set (e.g., chmod +x mvnw on Unix-like systems) or use Maven directly.
+The back-end is configured to serve static content found in the src/main/resources/static directory. If you make changes to front-end files, you may need to restart the server to see the updates.
+Detailed API documentation can be found in the docs directory, outlining the available endpoints and their usage.
 
-```
-http://localhost/EE417-GroupAssignment
-```
+Copy code
+Be sure to replace placeholder texts such as `your_database_name`, `your_username`, and `your_password` with the actual values relevant to your setup. This guide assumes the Spring Boot Maven Wrapper (`mvnw`) is included in your repository; if not, developers will need to have Maven installed and use `mvn` commands instead. The SQL scripts for database setup should be detailed enough to allow a simple execution in whatever database management tool the user prefers (like MySQL Workbench or phpMyAdmin).
 
-### Troubleshooting
 
-If you face any issues:
 
-- Check that your local server and MySQL services are active.
-- Confirm that the project files are in the correct directory for your server environment.
-- Make sure the database name and credentials in your configuration file match your local MySQL setup.
-- Ensure the SQL script is correctly imported, and tables are present in your database.
 
-For additional help, consult the project's documentation or reach out to a project maintainer.
 
