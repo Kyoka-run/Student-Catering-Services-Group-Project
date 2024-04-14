@@ -26,7 +26,9 @@ spring.datasource.password=your_password
 
 ### Step 3: Build the Project
 Run the following command in the root directory of the Spring Boot project to build the application:
-mvn clean install
+
+` ```bash mvn clean install`
+
 This will compile the application and run any unit tests.
 
 ### Step 4: Run the Application
