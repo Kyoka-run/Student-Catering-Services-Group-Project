@@ -44,5 +44,3 @@ Distributed under the MIT License. See LICENSE for more information.
 ### Acknowledgements
 Thanks to all contributors who have invested their efforts in this project.
 Special thanks to DCU for providing the platform for this assignment.
-
-For detailed usage and more information about the API, please refer to the API documentation.
