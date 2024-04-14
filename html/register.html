@@ -1,37 +1,31 @@
 <!-- Registration Page for Student Catering Services -->
-<!-- This page provides a form for new users to create an account to use the catering services. -->
+<!-- This page allows new users to create an account in the Student Catering Services web application. -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <!-- Responsive meta tag to ensure the page scales well on all devices -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register | Student Catering Services</title>
-    <link rel="stylesheet" href="../css/login.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title of the registration page -->
+  <title>Register</title>
+  <!-- Link to external CSS for styling -->
+  <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
-    <!-- Container for the registration form -->
-    <div class="register-container">
-        <!-- Title for the registration section -->
-        <h2>Register</h2>
-        <!-- Registration form where the action attribute should point to the server-side script that will handle the registration process -->
-        <form id="register-form">
-            <!-- Input for username with a placeholder for user guidance -->
-            <input type="text" id="username" placeholder="Username" required>
-            <!-- Input for email with appropriate type to bring up email-specific keyboards on mobile devices -->
-            <input type="email" id="email" placeholder="Email Address" required>
-            <!-- Input for password with type 'password' to hide the input content -->
-            <input type="password" id="password" placeholder="Password" required>
-            <!-- Submission button for the form -->
-            <button type="submit">Register</button>
-        </form>
-        <!-- Error message placeholder that can be populated by client-side validation or server-side error messages -->
-        <p id="error-message" class="error-message"></p>
-        <!-- Link to switch to the login page for users who already have an account -->
-        <p>Already have an account? <a href="login.html">Login here</a></p>
-    </div>
+  <!-- Container for the registration form -->
+  <div class="register-container">
+    <h2>Register</h2> <!-- Title for the registration form -->
+    <form id="register-form">
+      <input type="text" id="username" placeholder="Username" required> <!-- Input field for username -->
+      <input type="email" id="email" placeholder="Email Address" required> <!-- Input field for email -->
+      <input type="password" id="password" placeholder="Password" required> <!-- Input field for password -->
+      <button type="submit">Register</button> <!-- Submission button -->
+    </form>
+    <p id="error-message" class="error-message"></p> <!-- Area to display registration errors -->
+    <p>Already have an account? <a href="login.html">Login</a></p> <!-- Link for existing users to log in -->
+  </div>
 
-    <script src="../js/register.js"></script>
+  <!-- Script for registration form functionality -->
+  <script src="../js/register.js"></script>
 </body>
 </html>
