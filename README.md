@@ -61,7 +61,7 @@ To start the application, execute:
 ```
 The server will start, and the back-end will be accessible at http://localhost:8080.
 
-For more detailed installation information, see ISTALL.RD in the docs folder
+For more detailed installation information, see ISTALL.md in the docs folder.
 
 ### Front-end Setup
 The front-end static files are served by the Spring Boot application once it is running. You can access the home page by navigating to http://localhost:8080.
