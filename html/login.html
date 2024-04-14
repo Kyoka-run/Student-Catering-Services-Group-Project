@@ -1,34 +1,73 @@
 <!-- Login Page for Student Catering Services -->
-<!-- This page allows existing users to log in to access personalized services offered by the catering service. -->
+<!-- This page allows users to log in to their accounts in the Student Catering Services web application. -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Responsive meta tag to ensure proper scaling on different devices -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the login page -->
     <title>Login | Student Catering Services</title>
-    <link rel="stylesheet" href="../css/login.css">
+    <!-- Link to external CSS for styling -->
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <!-- Main container for the login form -->
-    <div class="login-container">
-        <h2>Login</h2> <!-- Heading for the login form -->
-        <!-- Form for user login; action should direct to the server-side authentication script -->
-        <form id="login-form" action="/submit-login" method="POST">
-            <!-- Input field for the user's email -->
-            <input type="email" id="email" name="email" placeholder="Email" required>
-            <!-- Input field for the user's password with obscured text -->
-            <input type="password" id="password" name="password" placeholder="Password" required>
-            <!-- Submit button for the form -->
-            <button type="submit">Login</button>
-        </form>
-        <!-- Dynamic error message area that can display authentication errors from the server -->
-        <p id="error-message" class="error-message"></p>
-        <!-- Link for users who need to register a new account -->
-        <p>New here? <a href="register.html">Create an account</a></p>
+    <!-- Header section with the page title -->
+    <div class="header">
+        <h1>Login</h1>
+    </div>
+    
+    <!-- Navigation bar for site navigation -->
+    <div id="navbar" class="clearfix">
+        <div id="navbar-left-div">
+            <a href="index.html">Home</a> <!-- Link to the homepage -->
+            <!-- Dropdown menus for additional navigation -->
+            <div class="dropdown">
+                <button class="dropbtn">Shop</button>
+                <div class="dropdown-content">
+                    <a href="shop/pizza.html">Pizza</a>
+                    <a href="shop/coffee.html">Coffee</a>
+                    <a href="shop/mexican.html">Mexican</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">About Us</button>
+                <div class="dropdown-content">
+                    <a href="static/about.html">About Us</a>
+                    <a href="static/tos.html">Tos</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">FAQ</button>
+                <div class="dropdown-content">
+                    <a href="static/forms.html">Forms</a>
+                    <a href="static/faq.html">FAQ</a>
+                </div>
+            </div>
+        </div>
+        <!-- Login link area -->
+        <div id="navbar-right-div">
+            <div id="login-container">
+                <a href="login.html">Login</a> <!-- Current active link to the login page -->
+            </div>
+        </div>
     </div>
 
-    <script src="../js/login.js"></script>
+    <!-- Main area for the login form -->
+    <div class="login-container">
+        <h2>Login</h2> <!-- Title for the login form -->
+        <form id="login-form">
+          <input type="text" id="username" placeholder="Username" required> <!-- Input field for username -->
+          <input type="password" id="password" placeholder="Password" required> <!-- Input field for password -->
+          <button type="submit">Login</button> <!-- Submission button -->
+        </form>
+        <p id="error-message" class="error-message"></p> <!-- Area to display login errors -->
+        <p>New? <a href="register.html">Register</a></p> <!-- Link for new users to register -->
+    </div>
+
+    <!-- Footer section -->
+    <footer>
+        <p>All rights reserved.</p> <!-- Copyright notice -->
+    </footer>
 </body>
 </html>
+
