@@ -6,37 +6,35 @@
 <head>
     <meta charset="UTF-8">
     <!-- The title is displayed on the browser tab and helps users understand the content of the page -->
-    <title>About | Student Catering Services</title>
-    <!-- Google font integration-->
+    <title>About Us | Student Catering Services</title>
+    <!-- Google font integration for Roboto typeface which is used throughout the site for a consistent look -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-    <!-- Main stylesheet -->
+    <!-- Main stylesheet link that defines the visual appearance of the page -->
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
-    <!-- Header section -->
+    <!-- Header section that includes the main title of the page -->
     <div class="header">
-        <h1>About</h1>
+        <h1>About Us</h1>
     </div>
 
-    <!-- Navigation bar that allows users to navigate to various parts of the application -->
+    <!-- Navigation bar allowing users to navigate through different pages of the website -->
     <div id="navbar" class="clearfix">
-        <!-- Navigation links aligned to the left of the navbar -->
+        <!-- Left-aligned navigation links -->
         <div id="navbar-left-div">
-            <!-- Link to the homepage of the website -->
-            <a href="../index.html">Home</a>
-            <!-- Dropdown menu providing a categorized collection of links to the shop section -->
+            <a href="../index.html">Home</a> <!-- Direct link to the homepage -->
+            <!-- Dropdown menu for shopping options -->
             <div class="dropdown">
                 <button class="dropbtn">Shop</button>
                 <div class="dropdown-content">
-                    <!-- Links to specific shopping categories like pizza, coffee, and Mexican -->
                     <a href="../shop/pizza.html">Pizza</a>
                     <a href="../shop/coffee.html">Coffee</a>
                     <a href="../shop/mexican.html">Mexican</a>
                 </div>
             </div>
-            <!-- The current page user is on -->
-            <a href="../static/about.html">About Us</a>
-            <!-- Dropdown for help-related links like forms and FAQs -->
+            <!-- Link to this current about us page, providing information about the service -->
+            <a href="../static/about.html" class="active">About Us</a>
+            <!-- Dropdown for more informational sections -->
             <div class="dropdown">
                 <button class="dropbtn">FAQ</button>
                 <div class="dropdown-content">
@@ -45,17 +43,19 @@
                 </div>
             </div>
         </div>
-        <!-- Right-aligned items in the navbar -->
+        <!-- Right-aligned section for user login -->
         <div id="navbar-right-div">
-            <div id="login-container">
-                <!-- Link to the login page, allowing returning users to access their accounts -->
-                <a href="../login.html">Login</a>
-            </div>
+            <a href="../login.html">Login</a> <!-- Provides a link for users to log into their accounts -->
         </div>
     </div>
 
-    <!-- Main content section of the about page -->
-    <div class="main">This is about us page content. It's a placeholder for actual content related to the website's purpose.</div>
-    <div class="footer"><p>All rights reserved.</p></div>
+    <!-- Main content section where the bulk of page content will go -->
+    <div class="main">
+        This is about us page content. It's a placeholder for actual content related to the website's purpose.
+    </div>
+    <!-- Footer section with copyright notice -->
+    <footer>
+        <p>All rights reserved.</p>
+    </footer>
 </body>
 </html>
