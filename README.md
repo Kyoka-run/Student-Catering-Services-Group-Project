@@ -61,7 +61,7 @@ To start the application, execute:
 ```
 The server will start, and the back-end will be accessible at http://localhost:8080.
 
-For more detailed installation information, see ISTALL.md in the docs folder.
+For more detailed installation information, see INSTALL.md in the docs folder.
 
 ### Database Initialization
 Execute the SQL scripts provided in the database directory to set up your database schema and populate it with initial data.
