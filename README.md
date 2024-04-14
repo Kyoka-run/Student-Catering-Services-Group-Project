@@ -32,24 +32,17 @@ Make sure you have the following installed:
 ### Usage
 Navigate through the application using the navigation bar. Access different sections such as 'Home', 'Shop', and 'About Us'. For administrative functions, use the admin login form available at admin.html.
 
+### API Documentation
+Refer to the api_documentation.md file in the repository for detailed information about backend endpoints, their usage, and examples.
+
 ### Contributing
+Feel free to fork the project and submit pull requests. You can also open issues for bugs or feature requests.
 
 ### License
 Distributed under the MIT License. See LICENSE for more information.
 
-### Team Members and Roles
-Celine Boudaie: Front-end development HTML and CSS
-Yann Joubert: Client-side interactive features (JavaScript)
-Bin Zhang: Server-side development
-Mhd Saria Al Khen: Database design and connectivity
-Gouri Dinase: Testing and quality assurance
-Genwei Zhang: Code repository management, and installation
-
-### Contact
-
 ### Acknowledgements
-
-### Endpoints
-
+Thanks to all contributors who have invested their efforts in this project.
+Special thanks to DCU for providing the platform for this assignment.
 
 For detailed usage and more information about the API, please refer to the API documentation.
