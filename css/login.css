@@ -1,4 +1,4 @@
-/* Basic layout and styling for the page */
+/* Basic styling for the entire body. Sets the font, removes default margin and padding, sets a background color, and centers content both horizontally and vertically. */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,8 +10,34 @@ body {
     height: 100vh;
 }
 
-/* Styling for registration and login forms */
-.register-container, .login-container {
+/* Styles for the registration container: sets background color, border radius for rounded corners, adds shadow for 3D effect, padding for spacing inside the container, and a fixed width. */
+.register-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 300px;
+}
+
+/* Styling for paragraph elements within the register container, centers text and sets top margin. */
+.register-container p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Styles for anchor tags in the register container: sets the link color and removes underline from links. */
+.register-container a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Adds an underline to links on hover for better user interaction feedback. */
+.register-container a:hover {
+  text-decoration: underline;
+}
+
+/* Duplicate styles for login container, similar to register container. Ideally, this duplication could be optimized. */
+.login-container {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -19,46 +45,40 @@ body {
     width: 300px;
 }
 
-/* Text alignment for paragraphs within containers */
-.register-container p, .login-container p {
-    text-align: center;
-    margin-top: 20px;
-}
-
-/* Link styling */
-.register-container a, .login-container a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-/* Link hover effect */
-.register-container a:hover, .login-container a:hover {
-    text-decoration: underline;
-}
-
-/* Header styling */
+/* Styling for H2 headers, sets top margin, text alignment, and text color. */
 h2 {
     margin-top: 0;
     text-align: center;
     color: #333;
 }
 
-/* Input and button styling */
-input[type="text"], input[type="email"], input[type="password"], button {
+/* Uniform styles for text inputs, email inputs, password inputs, and buttons: sets width, padding, margin, border, border radius, and box sizing. */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+button {
     width: 100%;
     padding: 10px;
     margin-top: 10px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
 }
 
-/* Button hover effect */
+/* Styling for buttons, sets background color, text color, cursor on hover. */
+button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Changes the button's background color on hover to give a darker shade for visual feedback. */
 button:hover {
     background-color: #0056b3;
 }
 
-/* Error message styling */
+/* Styles for displaying error messages in red and centered text alignment. */
 .error-message {
     color: red;
     text-align: center;
