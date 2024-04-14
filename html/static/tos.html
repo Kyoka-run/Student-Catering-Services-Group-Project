@@ -1,44 +1,68 @@
 <!-- Terms of Service Page for Student Catering Services -->
-<!-- This page outlines the terms and conditions that govern the use of the catering services by the students. -->
+<!-- This page outlines the rules and regulations for using the Student Catering Services website, ensuring users understand their rights and obligations. -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Title of the page indicating the content focus, helps with SEO and user understanding -->
     <title>Terms of Service | Student Catering Services</title>
-    <!-- Standard viewport tag to set up the viewport to scale based on the device width -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to Google Fonts for consistent and appealing typography -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <!-- Main CSS file that applies standard styles across the site -->
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
-    <!-- Header-->
-    <header>
+    <!-- Header section prominently displaying the purpose of the page -->
+    <div class="header">
         <h1>Terms of Service</h1>
-    </header>
+    </div>
     
-    <!-- Navigation bar providing links to the main pages of the website -->
-    <nav id="navbar">
-        <a href="../index.html">Home</a>
-        <a href="../static/about.html">About Us</a>
-        <a href="../static/faq.html">FAQ</a>
-        <!-- The Terms of Service link is highlighted to indicate the current page -->
-        <a href="../static/tos.html" class="active">Terms of Service</a>
-        <a href="../static/contact.html">Contact</a>
-    </nav>
-    
-    <!-- Main content section where the terms of service text is displayed -->
-    <div class="main-content">
-        <!-- Detailed paragraphs explaining the terms and conditions -->
-        <p>Please read these terms of service carefully before using our services.</p>
-        <!-- Additional sections explaining different clauses of the terms of service -->
-        ...
+    <!-- Navigation bar providing links to various sections of the website for easy user navigation -->
+    <div id="navbar" class="clearfix">
+        <div id="navbar-left-div">
+            <!-- Direct link back to the home page -->
+            <a href="../index.html">Home</a>
+            <!-- Dropdown menu for shopping categories, enhancing site navigation -->
+            <div class="dropdown">
+                <button class="dropbtn">Shop</button>
+                <div class="dropdown-content">
+                    <a href="../shop/pizza.html">Pizza</a>
+                    <a href="../shop/coffee.html">Coffee</a>
+                    <a href="../shop/mexican.html">Mexican</a>
+                </div>
+            </div>
+            <!-- Informational dropdown linking to the About and Terms pages -->
+            <div class="dropdown">
+                <button class="dropbtn">About Us</button>
+                <div class="dropdown-content">
+                    <a href="../static/about.html">About Us</a>
+                    <a href="../static/tos.html">Terms of Service</a>
+                </div>
+            </div>
+            <!-- Dropdown menu for frequently asked questions and forms -->
+            <div class="dropdown">
+                <button class="dropbtn">FAQ</button>
+                <div class="dropdown-content">
+                    <a href="../static/forms.html">Forms</a>
+                    <a href="../static/faq.html">FAQ</a>
+                </div>
+            </div>
+        </div>
+        <!-- Section on the right for login, aiding returning users in accessing their accounts quickly -->
+        <div id="navbar-right-div">
+            <a href="../login.html">Login</a>
+        </div>
     </div>
 
-    <!-- Footer section common across all pages for consistency -->
-    <footer>
-        <p>&copy; 2024 Student Catering Services. All rights reserved.</p>
-    </footer>
-
-    <script src="../../js/main.js"></script>
+    <!-- Main content area where the terms of service are clearly stated -->
+    <div class="main">
+        Terms of Service outline the rules and regulations for using this website.
+    </div>
+    <!-- Footer section to reinforce the copyright notice -->
+    <div class="footer">
+        <p>All rights reserved.</p>
+    </div>
 </body>
 </html>
+
