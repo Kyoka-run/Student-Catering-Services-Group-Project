@@ -4,23 +4,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Login</title>
-  <link rel="stylesheet" href="../css/login.css"> <!-- Link to external CSS for styling -->
+    <meta charset="UTF-8">
+    <title>Admin Login | Student Catering Services</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css"> <!-- Link to external CSS for styling -->
 </head>
 <body>
-  <div class="login-container">
-    <h2>Admin login</h2>
-    <!-- Login form for admin users -->
-    <form id="admin-login">
-      <input type="text" id="username" placeholder="Nom d'utilisateur" required> <!-- Username field -->
-      <input type="password" id="password" placeholder="Mot de passe" required> <!-- Password field -->
-      <button type="submit">Connexion</button> <!-- Submission button -->
-    </form>
-    <p id="error-message" class="error-message"></p> <!-- Area to display login errors -->
-  </div>
+    <div class="header">
+        <h1>Admin Login</h1> <!-- Title of the page displayed in the header -->
+    </div>
+    
+    <div id="navbar" class="clearfix">
+        <div id="navbar-left-div">
+            <a href="index.html">Home</a> <!-- Navigation link to the homepage -->
+            <div class="dropdown">
+                <button class="dropbtn">Shop</button> <!-- Dropdown menu for shopping options -->
+                <div class="dropdown-content">
+                    <a href="shop/pizza.html">Pizza</a> <!-- Link to pizza shopping page -->
+                    <a href="shop/coffee.html">Coffee</a> <!-- Link to coffee shopping page -->
+                    <a href="shop/mexican.html">Mexican</a> <!-- Link to Mexican food shopping page -->
+                </div>
+            </div>
 
-  <script src="../js/admin.js"></script>
+            <div class="dropdown">
+                <button class="dropbtn">About Us</button> <!-- Dropdown for about us section -->
+                <div class="dropdown-content">
+                    <a href="static/about.html">About Us</a> <!-- More detailed about us page -->
+                    <a href="static/tos.html">Tos</a> <!-- Terms of service link -->
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">FAQ</button> <!-- Dropdown menu for FAQs -->
+                <div class="dropdown-content">
+                    <a href="static/forms.html">Forms</a> <!-- Link to forms page -->
+                    <a href="static/faq.html">FAQ</a> <!-- Link to FAQ page -->
+                </div>
+            </div>
+        </div>
+        <div id="navbar-right-div">
+            <div id="login-container">
+                <a href="login.html">Login</a> <!-- Link for user login page -->
+            </div>
+        </div>
+    </div>
+
+    <div class="main2">
+        <div class="login-container">
+            <h2>Admin Login</h2> <!-- Heading for the admin login form -->
+            <form id="login-form">
+              <input type="text" id="username" placeholder="Username" required> <!-- Field for username input -->
+              <input type="password" id="password" placeholder="Password" required> <!-- Field for password input -->
+              <button type="submit">Login</button> <!-- Button to submit the form -->
+            </form>
+            <p id="error-message" class="error-message"></p> <!-- Area to display login errors -->
+            <p>New? <a href="register.html">Register</a></p> <!-- Link for new users to register -->
+        </div>
+    </div>
+    <div class="footer"><p>All rights reserved.</p></div> <!-- Footer section with copyright notice -->
 </body>
 </html>
