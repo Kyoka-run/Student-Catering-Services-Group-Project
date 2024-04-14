@@ -63,9 +63,6 @@ The server will start, and the back-end will be accessible at http://localhost:8
 
 For more detailed installation information, see ISTALL.md in the docs folder.
 
-### Front-end Setup
-The front-end static files are served by the Spring Boot application once it is running. You can access the home page by navigating to http://localhost:8080.
-
 ### Database Initialization
 Execute the SQL scripts provided in the database directory to set up your database schema and populate it with initial data.
 
