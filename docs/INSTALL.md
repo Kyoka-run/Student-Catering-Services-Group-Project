@@ -20,22 +20,24 @@ cd EE417-GroupAssignment/springboot
 ### Step 2: Configure Application Properties
 Edit the application.properties file found in src/main/resources to reflect your local database settings:
 
+```bash
 spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name
 spring.datasource.username=your_username
 spring.datasource.password=your_password
+```
 
 ### Step 3: Build the Project
 Run the following command in the root directory of the Spring Boot project to build the application:
-
-\```bash 
+```bash
 mvn clean install
-\```
-
+```
 This will compile the application and run any unit tests.
 
 ### Step 4: Run the Application
 To start the application, execute:
+```bash
 mvn spring-boot:run
+```
 The server will start, and the back-end will be accessible at http://localhost:8080.
 
 ## Front-end Setup
