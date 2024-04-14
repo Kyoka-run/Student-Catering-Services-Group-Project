@@ -1,6 +1,7 @@
 package ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.security;
 
 import java.io.IOException;
+import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -22,7 +23,6 @@ import org.springframework.web.cors.CorsConfiguration;
 
 import ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.Ee417GroupKAssignmentApplication;
 import ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.jwt.JwtAuthFilter;
-import io.jsonwebtoken.lang.Arrays;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
@@ -63,8 +63,9 @@ public class SecurityConfig {
         http
         .cors(cors -> cors.configurationSource(request -> {
         	CorsConfiguration config = new CorsConfiguration();
+        	config.applyPermitDefaultValues();
         	config.setAllowedOrigins(Arrays.asList(Ee417GroupKAssignmentApplication.corsAllowedUrl));
-        	return config;
+            return config;
         }))
         .authorizeHttpRequests(requests -> requests
         		.requestMatchers("/user").hasAuthority("admin")
@@ -77,6 +78,7 @@ public class SecurityConfig {
         		.requestMatchers("/section_update").authenticated()
         		.requestMatchers("/section_delete").authenticated()
         		.requestMatchers("/store_occup_report").authenticated()
+        		.requestMatchers("/html/dashboard.html").authenticated()
         		.anyRequest().permitAll())
         .sessionManagement(sessions -> sessions.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
         .addFilterBefore(authFilter, UsernamePasswordAuthenticationFilter.class)

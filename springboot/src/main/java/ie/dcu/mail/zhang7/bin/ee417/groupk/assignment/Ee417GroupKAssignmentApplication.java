@@ -16,7 +16,7 @@ public class Ee417GroupKAssignmentApplication implements WebMvcConfigurer {
 	
 	public static final String[] corsAllowedUrl = {
 			"http://localhost:8080",
-			"http://ee417.ince.app"
+			"https://ee417.ince.app"
 	};
 	
 	@Controller
