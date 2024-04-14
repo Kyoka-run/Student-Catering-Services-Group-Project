@@ -5,32 +5,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Title for the coffee page-->
     <title>Coffee | Student Catering Services</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
-    <!-- Header section of the coffee page -->
+    <!-- Header section displaying the page title, focused on coffee offerings -->
     <div class="header">
-        <h1>Coffee</h1> <!-- Title of the page -->
+        <h1>Coffee</h1>
     </div>
     
-    <!-- Navigation bar for easy access to various sections of the site -->
+    <!-- Navigation bar for easy site-wide navigation, including links to other main sections -->
     <div id="navbar" class="clearfix">
         <div id="navbar-left-div">
-            <a href="../index.html">Home</a> <!-- Link back to the homepage -->
-            <!-- Dropdown for shopping categories, each linking to their respective page -->
+            <!-- Link back to the home page -->
+            <a href="../index.html">Home</a>
+            <!-- Dropdown menu for shopping options allowing quick access to product categories -->
             <div class="dropdown">
                 <button class="dropbtn">Shop</button>
                 <div class="dropdown-content">
                     <a href="../shop/pizza.html">Pizza</a>
-                    <a href="../shop/coffee.html" class="active">Coffee</a> <!-- Current page is marked as active -->
+                    <a href="../shop/coffee.html" class="active">Coffee</a>
                     <a href="../shop/mexican.html">Mexican</a>
                 </div>
             </div>
-            <a href="../static/about.html">About Us</a> <!-- Static page with additional information about the services -->
-            <!-- Dropdown for help related pages like FAQ and forms -->
+            <!-- Dropdown for informational pages such as About Us and Terms of Service -->
+            <div class="dropdown">
+                <button class="dropbtn">About Us</button>
+                <div class="dropdown-content">
+                    <a href="../static/about.html">About Us</a>
+                    <a href="../static/tos.html">Tos</a>
+                </div>
+            </div>
+            <!-- Dropdown menu for additional resources like FAQs and forms -->
             <div class="dropdown">
                 <button class="dropbtn">FAQ</button>
                 <div class="dropdown-content">
@@ -39,37 +44,57 @@
                 </div>
             </div>
         </div>
-        <!-- Right-side login link for user account access -->
+        <!-- Right-aligned login section for easy user access -->
         <div id="navbar-right-div">
-            <div id="login-container">
-                <a href="../login.html">Login</a>
-            </div>
+            <a href="../login.html">Login</a>
         </div>
     </div>
 
-    <!-- Main section displaying coffee items for purchase -->
+    <!-- Main content area showcasing coffee products, each with a visual and options for sizes -->
     <div class="main">
         <div class="row clearfix">
-            <!-- Displaying individual coffee items, each in its column -->
+            <!-- Each column contains a shop item with an image, description, and options for purchasing -->
             <div class="col">
                 <div class="shop-item">
                     <img src="../../images/coffee1.jpg" alt="Coffee Item 1">
                     <label for="size">Mocha - Choose Size</label>
-                    <!-- Dropdown to select size and price -->
                     <select id="size" name="size">
                         <option value="Small"> $8.99 - Small</option>
                         <option value="medium"> $10.99 - Medium</option>
                         <option value="large"> $12.99 - Large</option>
                     </select><br>
-                    <!-- Button to add the coffee to the shopping cart -->
-                    <button class="add-to-cart">Add to Cart</button>
                 </div>
             </div>
-            <!-- Additional columns for more coffee items as needed -->
+
+            <div class="col">
+                <div class="shop-item">
+                    <img src="../../images/coffee2.jpg" alt="Coffee Item 2">
+                    <label for="size">Flat White - Choose Size</label>
+                    <select id="size" name="size">
+                        <option value="Small"> $8.99 - Small</option>
+                        <option value="medium"> $10.99 - Medium</option>
+                        <option value="large"> $12.99 - Large</option>
+                    </select><br>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="shop-item">
+                    <img src="../../images/coffee3.jpg" alt="Coffee Item 3">
+                    <label for="size">Cappuccino - Choose Size</label>
+                    <select id="size" name="size">
+                        <option value="Small"> $8.99 - Small</option>
+                        <option value="medium"> $10.99 - Medium</option>
+                        <option value="large"> $12.99 - Large</option>
+                    </select><br>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Footer for copyright and additional information -->
-    <div class="footer"><p>All rights reserved.</p></div>
+    <!-- Footer section with a simple copyright notice -->
+    <div class="footer">
+        <p>All rights reserved.</p>
+    </div>
 </body>
 </html>
