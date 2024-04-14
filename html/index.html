@@ -6,45 +6,103 @@
 <head>
     <meta charset="UTF-8">
     <!-- Title of the home page -->
-    <title>Welcome | Student Catering Services</title>
+    <title>Home | Student Catering Services</title>
     <!-- Link to the stylesheet for common styles -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <!-- Header section with the application title and logo -->
+    <!-- Header section with the application title -->
     <div class="header">
-        <h1>Welcome to Student Catering Services</h1>
-        <img src="images/logo.png" alt="Student Catering Services Logo">
+        <h1>Home</h1>
     </div>
     
     <!-- Navigation bar for site navigation -->
-    <nav id="navbar">
-        <!-- Home link is active since we are on the home page -->
-        <a href="index.html" class="active">Home</a>
-        <!-- Links to other pages of the application -->
-        <a href="about.html">About Us</a>
-        <a href="menu.html">Menu</a>
-        <a href="contact.html">Contact</a>
-        <!-- Login link for user to access their account -->
-        <a href="login.html" class="login">Login</a>
-    </nav>
-    
+    <div id="navbar" class="clearfix">
+        <div id="navbar-left-div">
+            <a href="index.html" class="active">Home</a> <!-- Link to the homepage, currently active -->
+            <!-- Dropdown menu for shopping options -->
+            <div class="dropdown">
+                <button class="dropbtn">Shop</button>
+                <div class="dropdown-content">
+                    <a href="shop/pizza.html">Pizza</a>
+                    <a href="shop/coffee.html">Coffee</a>
+                    <a href="shop/mexican.html">Mexican</a>
+                </div>
+            </div>
+            <!-- Dropdown menu for about us information -->
+            <div class="dropdown">
+                <button class="dropbtn">About Us</button>
+                <div class="dropdown-content">
+                    <a href="static/about.html">About Us</a>
+                    <a href="static/tos.html">Tos</a>
+                </div>
+            </div>
+            <!-- Dropdown menu for FAQ section -->
+            <div class="dropdown">
+                <button class="dropbtn">FAQ</button>
+                <div class="dropdown-content">
+                    <a href="static/forms.html">Forms</a>
+                    <a href="static/faq.html">FAQ</a>
+                </div>
+            </div>
+        </div>
+        <div id="navbar-right-div">
+            <a href="login.html">Login</a> <!-- Link for user login page -->
+        </div>
+    </div>
+
     <!-- Main content area of the home page -->
-    <div class="main-content">
-        <!-- Welcome message or introductory content goes here -->
-        <p>Welcome to the Student Catering Services. Explore our menu and order your favorite dishes!</p>
+    <div class="main">
+        <h2>Welcome to Our Student Catering Services</h2>
+        <!-- Introductory content with image links to shop items -->
+        <p>Discover our wide range of delicious food options, from coffee to pizza and beyond.</p>
+        <!-- Grid layout for featured products -->
+        <div id="sub-right">
+            <div class="row clearfix">
+                <div class="col">
+                    <a href="shop/coffee.html">
+                        <img src="../images/coffee1.jpg" alt="Coffee Item 1">
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="shop/mexican.html">
+                        <img src="../images/mexican2.jpg" alt="Mexican Item 2">
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="shop/pizza.html">
+                        <img src="../images/pizza3.JPG" alt="Pizza Item 3">
+                    </a>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col">
+                    <a href="shop/mexican.html">
+                        <img src="../images/mexican3.jpg" alt="Mexican Item 3">
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="shop/pizza.html">
+                        <img src="../images/pizza1.JPG" alt="Pizza Item 1">
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="shop/coffee.html">
+                        <img src="../images/coffee2.jpg" alt="Coffee Item 2">
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Footer section with copyright and additional links -->
     <footer>
         <p>&copy; 2024 Student Catering Services. All rights reserved.</p>
-        <!-- Social media or additional links -->
-        <a href="terms.html">Terms of Service</a>
-        <a href="privacy.html">Privacy Policy</a>
     </footer>
 
     <!-- Scripts for interactivity -->
     <script src="js/script.js"></script>
 </body>
 </html>
+
 
