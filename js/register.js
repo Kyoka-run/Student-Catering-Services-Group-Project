@@ -1,19 +1,49 @@
-// Event listener for handling the submission of the registration form
+document.addEventListener('DOMContentLoaded', function() {
 document.getElementById('register-form').addEventListener('submit', function(event) {
-    event.preventDefault();  // Stops the form from submitting normally
+  event.preventDefault();
 
-    // Gathering the values entered in the form fields
-    var username = document.getElementById('username').value;
-    var email = document.getElementById('email').value;
-    var password = document.getElementById('password').value;
-
-    // Logging the information to console for verification
-    console.log("Nom d'utilisateur:", username);
-    console.log("Adresse e-mail:", email);
-    console.log("Mot de passe:", password);
-
-    // Redirecting to a dashboard page after a brief delay for seeing the log
-    setTimeout(function() {
-        window.location.href = "dash.html";
-      }, 1000);
+  event.stopPropagation();
+   success = do_signup();
+   if (success) {
+    window.location.href="login.html";
+   } else {
+    alert("Invalid user input type")
+   }
+  });
 });
+ function do_signup() {
+  var username = document.getElementById('username').value;
+  var email = document.getElementById('email').value;
+  var password = document.getElementById('password').value;
+  let result = false;
+  if (username != "" && password != "") {
+   $.ajax({
+    type: 'post',
+    async: false,
+    cache: false,
+    url: '/user_register',
+    xhrFields: {
+     withCredentials: true
+    },
+    headers: {
+     'Accept': 'application/json, text/plain, */*',
+     'Content-Type':'application/json',
+     
+    },
+    data: JSON.stringify({
+     username: username,
+     email:email,
+     password: password
+    }),
+    crossOrigin: true,
+    
+    success: function(data){
+
+    },
+     error: function (data) {
+      result = false;
+     }
+   });
+  }
+  return result;
+ }

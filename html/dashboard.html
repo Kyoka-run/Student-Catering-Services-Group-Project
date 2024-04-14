@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home | Student Catering Services</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Add Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* CSS for the dashboard */
+        .dashboard {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+	    min-height:800px;
+        }
+        .graph-container {
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        #occupants-label {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        #occupants-value {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .refresh-button {
+            background-color: orange;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 20px;
+        }
+        .refresh-button:hover {
+            background-color: #ff9900;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Dashboard</h1>
+    </div>
+    
+    <div id="navbar" class="clearfix">
+        <div id="navbar-left-div">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Shop</button>
+                <div class="dropdown-content">
+                    <a href="shop/pizza.html">Pizza</a>
+                    <a href="shop/coffee.html">Coffee</a>
+                    <a href="shop/mexican.html">Mexican</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">About Us</button>
+                <div class="dropdown-content">
+                    <a href="static/about.html">About Us</a>
+                    <a href="static/tos.html">Tos</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Resources</button>
+                <div class="dropdown-content">
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="static/faq.html">FAQ</a>
+                </div>
+            </div>
+        </div>
+        <div id="navbar-right-div">
+            <div id="login-container">
+                <a href="login.html">Login</a>
+            </div>
+            
+        </div>
+    
+        
+        
+    </div>
+
+
+    <!-- Dashboard Section -->
+    <div class="dashboard">
+        <!-- Occupants Label -->
+        <div class="occupants-container">
+            <h3 id="occupants-label">Number of Occupants:</h3>
+            <p id="occupants-value">0</p>
+            <button class="refresh-button" onclick="refreshOccupants()">Refresh</button>
+        </div>
+        <!-- Graph Container -->
+        <div class="graph-container">
+            <h2>Shop Queueing</h2>
+            <canvas id="queue-graph"></canvas>
+        </div>
+    </div>
+
+    <div class="footer"><p>All rights reserved.</p></div>
+
+    <script>
+        // JavaScript for updating occupants value (Example)
+        // You can update this value dynamically based on your application logic
+        var sections = ['Pizza Shop', 'Mexican Food Shop', 'Coffee', 'Chicken Shop', 'Supermarket'];
+        var occupantsValue = 0; // Example value
+		var occupantsBySection = [];
+        document.getElementById('occupants-value').innerText = occupantsValue;
+		
+		// Function to group JSON elements by a shared value
+		function groupAndCalculate(jsonData) {
+			const groupedData = {};
+
+			// Grouping elements by 'group' property
+			jsonData.forEach(item => {
+				if (!groupedData[item.sectionId]) {
+					groupedData[item.sectionId] = [];
+				}
+				groupedData[item.sectionId].push(item.value);
+			});
+
+			// Calculating the number for each group
+			const groupCounts = {};
+			Object.keys(groupedData).forEach(group => {
+				groupCounts[group] = groupedData[group].length;
+			});
+
+			return groupCounts;
+		}
+
+        // JavaScript function to refresh occupants value
+        function refreshOccupants() {
+			$.ajax({
+				type: 'get',
+				async: false,
+				cache: false,
+				url: '/queues',
+				xhrFields: {
+					withCredentials: true
+				},
+				headers: {
+					'Accept': 'application/json, text/plain, */*',
+				},
+				crossOrigin: true,
+				data: {
+				//temporarily hardcode the date and time to match the demo data in the database; 
+				//we should have rolling data in the database and a date picker or "today" code for real queries
+					start: '2024-04-13 00:00:00',
+					end: '2024-04-13 23:59:59'
+				},
+				success: function (data){
+					var temp = groupAndCalculate(data);
+					occupantsBySection = [];
+					for (let i = 1; i <= sections.length; i++) {
+						occupantsBySection.push(temp[i] || 0);
+					}
+				}
+			});
+			$.ajax({
+				type: 'get',
+				async: false,
+				cache: false,
+				url: '/stor_occup',
+				xhrFields: {
+					withCredentials: true
+				},
+				headers: {
+					'Accept': 'application/json, text/plain, */*',
+				},
+				crossOrigin: true,
+				success: function (data){
+					occupantsValue = data['num'];
+				}
+			});
+            document.getElementById('occupants-value').innerText = occupantsValue;
+            myChart.data.datasets[0].data = occupantsBySection;
+            myChart.update();
+        }
+
+        var ctx = document.getElementById('queue-graph').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: sections,
+                datasets: [{
+                    label: '',
+                    data: occupantsBySection,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                legend: {
+                    display: false
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+        refreshOccupants();
+    </script>
+</body>
+</html>

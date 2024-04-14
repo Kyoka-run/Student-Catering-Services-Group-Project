@@ -1,4 +1,7 @@
-
+@font-face {
+    font-family: 'Audrey Bold';
+    src: url('Audrey-Bold.otf') format('opentype');
+}
 /* General styles omitted for brevity, focusing on adjustments */
 
 /* Styling for the shop items removed for alignment correction */
@@ -22,11 +25,20 @@ body, h1, h2, h3, p, div {
     margin: 0;
     padding: 0;
 }
+h1{
+
+font-family: 'Audrey Bold', sans-serif;
+font-size:50px;
+color: rgb(255, 190, 0);
+}
 
 /* Setting a basic font and background color for the body */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f1f4f4;
+    background: url("../images/background.png");
+    min-height:1000px;
+
 }
 
 /* Styling for the header section */
