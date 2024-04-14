@@ -1,74 +1,98 @@
-<!-- Pizza Page for Student Catering Services -->
-<!-- This page displays various pizza options available for order, each with customizable sizes and toppings. -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Ensuring the page is responsive and scales correctly on all devices -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza | Student Catering Services</title>
-    <link rel="stylesheet" href="../../css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Page header with the main title -->
+    <!-- Header of the page, clearly identifying the focus on pizza offerings within the catering service -->
     <div class="header">
         <h1>Pizza</h1>
     </div>
-
-    <!-- Navigation bar to help users easily navigate through the site -->
+    
+    <!-- Navigation bar to facilitate user movement throughout the website with ease -->
     <div id="navbar" class="clearfix">
-        <!-- Left-aligned items on the navbar -->
         <div id="navbar-left-div">
-            <a href="../index.html">Home</a> <!-- Direct link to the home page -->
-            <!-- Dropdown for different sections of the shop, helping users explore other categories -->
+            <!-- Home link for returning to the main landing page -->
+            <a href="../index.html">Home</a>
+            <!-- Dropdown for direct access to various shop categories -->
             <div class="dropdown">
                 <button class="dropbtn">Shop</button>
                 <div class="dropdown-content">
-                    <a href="../shop/pizza.html">Pizza</a> <!-- Current page, highlighted as active -->
+                    <a href="../shop/pizza.html" class="active">Pizza</a>
                     <a href="../shop/coffee.html">Coffee</a>
                     <a href="../shop/mexican.html">Mexican</a>
                 </div>
             </div>
-            <a href="../static/about.html">About Us</a> <!-- Link to learn more about the service -->
-            <!-- Dropdown for help-related links -->
+            <!-- Dropdown for additional site information, enhancing user knowledge about the service -->
             <div class="dropdown">
-                <button class="dropbtn">Help</button>
+                <button class="dropbtn">About Us</button>
+                <div class="dropdown-content">
+                    <a href="../static/about.html">About Us</a>
+                    <a href="../static/tos.html">Tos</a>
+                </div>
+            </div>
+            <!-- Dropdown for FAQs and forms, offering support and resources to the users -->
+            <div class="dropdown">
+                <button class="dropbtn">FAQ</button>
                 <div class="dropdown-content">
                     <a href="../static/forms.html">Forms</a>
                     <a href="../static/faq.html">FAQ</a>
                 </div>
             </div>
         </div>
-        <!-- Right-aligned items, typically for user account management -->
+        <!-- Login area on the right side of the navbar for quick user access -->
         <div id="navbar-right-div">
-            <a href="../login.html">Login</a> <!-- Allows users to log into their accounts -->
+            <a href="../login.html">Login</a>
         </div>
     </div>
 
-    <!-- Main content section where pizza options are displayed -->
+    <!-- Main section showcasing various pizza options available for order -->
     <div class="main">
         <div class="row clearfix">
-            <!-- Each column represents a different pizza, with options to select size and add to cart -->
+            <!-- Individual columns for each pizza type, with an image, description, and size options for ordering -->
             <div class="col">
                 <div class="shop-item">
                     <img src="../../images/pizza1.jpg" alt="Pizza Item 1">
                     <label for="size">Pepperoni Pizza - Choose Size</label>
                     <select id="size" name="size">
-                        <option value="Small"> $9.99 - Small</option>
-                        <option value="Medium"> $11.99 - Medium</option>
-                        <option value="Large"> $13.99 - Large</option>
+                        <option value="Small"> $8.99 - Small</option>
+                        <option value="medium"> $10.99 - Medium</option>
+                        <option value="large"> $12.99 - Large</option>
                     </select><br>
-                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="shop-item">
+                    <img src="../../images/pizza2.jpg" alt="Pizza Item 2">
+                    <label for="size">Margherita Pizza - Choose Size</label>
+                    <select id="size" name="size">
+                        <option value="Small"> $8.99 - Small</option>
+                        <option value="medium"> $10.99 - Medium</option>
+                        <option value="large"> $12.99 - Large</option>
+                    </select><br>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="shop-item">
+                    <img src="../../images/pizza3.jpg" alt="Pizza Item 3">
+                    <label for="size">Merguez Sausage Pizza - Choose Size</label>
+                    <select id="size" name="size">
+                        <option value="Small"> $8.99 - Small</option>
+                        <option value="medium"> $10.99 - Medium</option>
+                        <option value="large"> $12.99 - Large</option>
+                    </select><br>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Footer section with copyright and link to terms of service -->
+    <!-- Footer to display copyright information -->
     <div class="footer">
-        <p>&copy; 2024 Student Catering Services. All rights reserved.</p>
-    </footer>
+        <p>All rights reserved.</p>
+    </div>
 </body>
 </html>
+
