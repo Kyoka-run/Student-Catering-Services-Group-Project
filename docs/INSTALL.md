@@ -20,8 +20,6 @@ cd EE417-GroupAssignment/springboot
 ### Step 2: Configure Application Properties
 Edit the application.properties file found in src/main/resources to reflect your local database settings:
 
-bash
-Copy code
 spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name
 spring.datasource.username=your_username
 spring.datasource.password=your_password
@@ -29,8 +27,6 @@ spring.datasource.password=your_password
 ### Step 3: Build the Project
 Run the following command in the root directory of the Spring Boot project to build the application:
 
-bash
-Copy code
 ./mvnw clean install
 # Or if using Maven directly:
 # mvn clean install
@@ -39,7 +35,6 @@ This will compile the application and run any unit tests.
 ### Step 4: Run the Application
 To start the application, execute:
 
-Copy code
 ./mvnw spring-boot:run
 # Or if using Maven directly:
 # mvn spring-boot:run
@@ -59,7 +54,6 @@ If you encounter any issues with the Maven Wrapper (i.e., ./mvnw commands), ensu
 The back-end is configured to serve static content found in the src/main/resources/static directory. If you make changes to front-end files, you may need to restart the server to see the updates.
 Detailed API documentation can be found in the docs directory, outlining the available endpoints and their usage.
 
-Copy code
 Be sure to replace placeholder texts such as `your_database_name`, `your_username`, and `your_password` with the actual values relevant to your setup. This guide assumes the Spring Boot Maven Wrapper (`mvnw`) is included in your repository; if not, developers will need to have Maven installed and use `mvn` commands instead. The SQL scripts for database setup should be detailed enough to allow a simple execution in whatever database management tool the user prefers (like MySQL Workbench or phpMyAdmin).
 
 
