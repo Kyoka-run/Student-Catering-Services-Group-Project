@@ -1,5 +1,5 @@
 # EE417-GroupAssignment
-# Student Catering Services
+## Student Catering Services
 
 Welcome to the Student Catering Services web application, developed for the EE417 course assignment. This application serves as a platform for students to explore and order a variety of food options provided by the student catering service, including coffee, pizza, Mexican dishes, and more.
 
