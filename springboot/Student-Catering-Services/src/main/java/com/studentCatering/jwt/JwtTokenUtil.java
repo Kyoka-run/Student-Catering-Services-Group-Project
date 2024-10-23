@@ -1,4 +1,4 @@
-package ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.jwt;
+package com.studentCatering.jwt;
 
 import java.util.Date;
 import java.util.HashMap;

@@ -1,9 +1,10 @@
-package ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.jwt;
+package com.studentCatering.jwt;
 
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Optional;
 
+import com.studentCatering.security.UserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -11,8 +12,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
-
-import ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.security.UserDetailsService;
 import io.jsonwebtoken.ExpiredJwtException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -29,7 +28,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
     private JwtTokenUtil jwtTokenUtil; 
   
     @Autowired
-    private UserDetailsService userDetailsService; 
+    private UserDetailsService userDetailsService;
     
     private static Optional<String> readCookie(HttpServletRequest request, String key) {
     	Cookie[] cookies = request.getCookies();

@@ -1,8 +1,13 @@
-package ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.controller;
+package com.studentCatering.controller;
 
 import java.util.Map;
 import java.util.Optional;
 
+import com.studentCatering.entity.User;
+import com.studentCatering.jwt.JwtAuthFilter;
+import com.studentCatering.jwt.JwtTokenUtil;
+import com.studentCatering.repository.RoleRepository;
+import com.studentCatering.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,13 +17,10 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
-import ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.jwt.JwtTokenUtil;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.entity.*;
-import ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.jwt.JwtAuthFilter;
-import ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.jpa.*;
+
 
 @RestController
 public class UserController {

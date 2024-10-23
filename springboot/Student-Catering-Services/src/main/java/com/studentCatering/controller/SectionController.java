@@ -1,12 +1,12 @@
-package ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.controller;
+package com.studentCatering.controller;
 
+import com.studentCatering.entity.Section;
+import com.studentCatering.repository.SectionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
-import ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.entity.Section;
-import ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.jpa.SectionRepository;
 
 import java.util.*;
 

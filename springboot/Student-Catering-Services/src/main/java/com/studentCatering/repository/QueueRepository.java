@@ -1,12 +1,12 @@
-package ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.jpa;
+package com.studentCatering.repository;
 
 import java.sql.Timestamp;
 import java.util.List;
 
+import com.studentCatering.entity.Queue;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.entity.Queue;
 
 @Repository
 public interface QueueRepository extends JpaRepository<Queue, Integer> {

@@ -1,12 +1,12 @@
-package ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.controller;
+package com.studentCatering.controller;
 
+import com.studentCatering.entity.Item;
+import com.studentCatering.repository.ItemRepository;
+import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.*;
-import org.springframework.security.core.Authentication;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.entity.Item;
-import ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.jpa.ItemRepository;
 
 import java.util.*;
 

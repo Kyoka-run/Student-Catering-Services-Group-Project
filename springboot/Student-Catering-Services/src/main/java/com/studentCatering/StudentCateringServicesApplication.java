@@ -9,5 +9,5 @@ public class StudentCateringServicesApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(StudentCateringServicesApplication.class, args);
 	}
-
+	public static final String corsAllowedUrl = "http://localhost:3000";
 }

@@ -1,4 +1,4 @@
-package ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.entity;
+package com.studentCatering.entity;
 
 import jakarta.persistence.*;
 import java.math.BigDecimal;

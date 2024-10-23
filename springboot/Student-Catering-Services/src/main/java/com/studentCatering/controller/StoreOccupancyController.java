@@ -1,12 +1,11 @@
-package ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.controller;
+package com.studentCatering.controller;
 
+import com.studentCatering.entity.StoreOccupancy;
+import com.studentCatering.repository.StoreOccupancyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
-
-import ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.entity.StoreOccupancy;
-import ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.jpa.StoreOccupancyRepository;
 
 import java.util.*;
 

@@ -1,15 +1,14 @@
-package ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.controller;
+package com.studentCatering.controller;
 
+import com.studentCatering.entity.Queue;
+import com.studentCatering.repository.QueueRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
-
-import ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.entity.Queue;
-import ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.jpa.QueueRepository;
-
 import java.sql.Timestamp;
 import java.util.*;
+
 
 @RestController
 public class QueueController {

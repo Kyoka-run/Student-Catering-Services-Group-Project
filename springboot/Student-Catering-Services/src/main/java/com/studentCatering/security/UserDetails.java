@@ -1,12 +1,12 @@
-package ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.security;
+package com.studentCatering.security;
 
 import java.util.*;
 
+import com.studentCatering.entity.Role;
+import com.studentCatering.entity.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
-import ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.entity.Role;
-import ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.entity.User;
 
 @SuppressWarnings("serial")
 public class UserDetails implements org.springframework.security.core.userdetails.UserDetails {

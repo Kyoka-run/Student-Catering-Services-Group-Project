@@ -1,5 +1,11 @@
-package ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.controller;
+package com.studentCatering.controller;
 
+import com.studentCatering.entity.User;
+import com.studentCatering.entity.Voucher;
+import com.studentCatering.entity.VoucherUser;
+import com.studentCatering.repository.UserRepository;
+import com.studentCatering.repository.VoucherRepository;
+import com.studentCatering.repository.VoucherUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -7,9 +13,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
-import ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.entity.*;
-import ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.entity.VoucherUser.VoucherStatus;
-import ie.dcu.mail.zhang7.bin.ee417.groupk.assignment.jpa.*;
+
 
 import java.security.SecureRandom;
 import java.util.*;
@@ -34,7 +38,7 @@ public class VoucherController {
 	        voucherUser.setUserid(userid);
 	        voucherUser.setVoucherid(voucherid);
 	        voucherUser.setCode(generateRandomCode());
-	        voucherUser.setStatus(VoucherStatus.READY);
+	        voucherUser.setStatus(VoucherUser.VoucherStatus.READY);
 	        voucherUser.setValidUntil(validUntil);
 	        return voucherUserRepository.save(voucherUser);
 	    }
